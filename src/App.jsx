@@ -1,20 +1,23 @@
-import { Box } from '@mui/material';
-import { blue } from '@mui/material/colors';
+import { Box, Typography } from '@mui/material';
+import { ThemeProvider } from '@mui/material/styles';
 import AppHeader from './components/Header';
+import { lightTheme } from './themes/lightTheme';
+
 function App() {
   return (
-    <Box
-      sx={{
-        flexGrow: 1,
-        margin: 0,
-        padding: 0,
-        backgroundColor: blue,
-      }}
-      classname="parentBox"
-    >
-      <AppHeader />
-      <p>Click on the Vite and React logos to learn more</p>
-    </Box>
+    <ThemeProvider theme={lightTheme}>
+      <Box
+        sx={{
+          flexGrow: 1,
+          margin: 0,
+          padding: 0,
+        }}
+        classname="parentBox"
+      >
+        <AppHeader />
+        <Typography>Click on the Vite and React logos to learn more</Typography>
+      </Box>
+    </ThemeProvider>
   );
 }
 

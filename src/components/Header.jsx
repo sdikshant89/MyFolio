@@ -8,10 +8,14 @@ export default function AppHeader() {
   return (
     <AppBar position="static">
       <Toolbar>
-        <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-          News
+        <Typography
+          variant="h5"
+          component="div"
+          sx={{ flexGrow: 1, color: 'black' }}
+        >
+          Dikshant Sharma
         </Typography>
-        <Button color="inherit">Login</Button>
+        <Button>Login</Button>
       </Toolbar>
     </AppBar>
   );
