@@ -1,4 +1,5 @@
 import '@fontsource/poppins/300.css';
+import '@fontsource/poppins/400.css';
 import '@fontsource/poppins/700.css';
 import { createTheme } from '@mui/material/styles';
 
@@ -23,7 +24,7 @@ export const darkTheme = createTheme({
         root: {
           backgroundColor: 'transparent',
           // Color of all the text in appBar
-          color: '#61A9F1',
+          color: 'White',
         },
       },
     },

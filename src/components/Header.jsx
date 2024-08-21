@@ -26,6 +26,10 @@ export default function AppHeader() {
           sx={{
             display: 'flex',
             justifyContent: 'space-between',
+            '& .MuiTypography-root': {
+              fontWeight: 400,
+              color: '#61A9F1',
+            },
             '& .MuiButton-root': {
               display: 'flex',
               alignItems: 'center',
@@ -33,7 +37,7 @@ export default function AppHeader() {
               '&:hover': {
                 '& .MuiTypography-root': {
                   fontSize: '1.2rem',
-                  fontWeight: '700',
+                  fontWeight: 700,
                 },
                 '& .hover-image': {
                   animationPlayState: 'paused', // Start animation on hover
@@ -45,12 +49,6 @@ export default function AppHeader() {
                 animationPlayState: 'paused',
               },
             },
-            // '& .hover-image': {
-            //   width: '1.2rem', // Adjust the logo size to match font size (rem is relative to root)
-            //   height: 'auto', // Maintain aspect ratio
-            //    // Pause animation by default
-            //   transition: 'animation 0.3s ease', // Smooth transition
-            // },
           }}
         >
           <Button>
