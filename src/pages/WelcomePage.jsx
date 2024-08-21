@@ -13,9 +13,8 @@ function WelcomePage(props) {
           color: '#0b0943',
           fontWeight: 700,
           fontSize: '28rem',
-          margin: 0, // Remove any margin
-          padding: 0, // Remove any padding
           lineHeight: 0.75,
+          userSelect: 'none',
         }}
       >
         Hey!

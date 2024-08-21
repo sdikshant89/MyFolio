@@ -1,3 +1,4 @@
+import '@fontsource-variable/source-code-pro';
 import '@fontsource/poppins/300.css';
 import '@fontsource/poppins/400.css';
 import '@fontsource/poppins/700.css';
@@ -36,7 +37,8 @@ export const darkTheme = createTheme({
     MuiTypography: {
       styleOverrides: {
         root: {
-          fontFamily: 'sen, Poppins, Arial, sans-serif',
+          fontFamily:
+            'sen, Poppins, Arial, Source Code Pro Variable, sans-serif',
         },
         body1: {
           fontWeight: 400,

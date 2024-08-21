@@ -19,9 +19,29 @@ export default function AppHeader() {
         <Typography
           variant="h4"
           component="div"
-          sx={{ flexGrow: 1, fontWeight: '500', fontSize: '4vh' }}
+          sx={{
+            flexGrow: 1,
+            fontWeight: '500',
+            fontSize: '3.5vh',
+            fontFamily: 'Source Code Pro Variable, Poppins, sen, Arial',
+            userSelect: 'none',
+          }}
         >
-          Dikshant.S
+          <Box component="span" sx={{ color: '#33FF57' }}>
+            &lt;
+          </Box>
+          <Box component="span" sx={{ color: 'lightgrey' }}>
+            Hello
+          </Box>
+          <Box component="span" sx={{ color: 'white' }}>
+            , World
+          </Box>
+          <Box component="span" sx={{ color: 'orange' }}>
+            !
+          </Box>
+          <Box component="span" sx={{ color: '#33FF57' }}>
+            &gt;
+          </Box>
         </Typography>
         <Box
           sx={{
