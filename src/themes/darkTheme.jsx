@@ -24,7 +24,7 @@ export const darkTheme = createTheme({
         root: {
           backgroundColor: 'transparent',
           // Color of all the text in appBar
-          color: 'White',
+          color: '#bad7d6',
         },
       },
     },

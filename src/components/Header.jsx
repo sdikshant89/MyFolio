@@ -5,6 +5,7 @@ import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import * as React from 'react';
 import linkedinLogo from '../logos/LI-In-Bug.png';
+import gitLogo from '../logos/github-color.svg';
 import hiLogo from '../logos/hi.gif';
 
 export default function AppHeader() {
@@ -18,7 +19,7 @@ export default function AppHeader() {
         <Typography
           variant="h4"
           component="div"
-          sx={{ flexGrow: 1, fontWeight: '700', fontSize: '5vh' }}
+          sx={{ flexGrow: 1, fontWeight: '700', fontSize: '4vh' }}
         >
           Dikshant.S
         </Typography>
@@ -39,9 +40,6 @@ export default function AppHeader() {
                   fontSize: '1.2rem',
                   fontWeight: 700,
                 },
-                '& .hover-image': {
-                  animationPlayState: 'paused', // Start animation on hover
-                },
               },
               '& img': {
                 width: '1.2rem', // Adjust the logo size to match font size (rem is relative to root)
@@ -57,12 +55,29 @@ export default function AppHeader() {
           <Button>
             <Typography variant="body1">About</Typography>
           </Button>
-          <Button>
+          <Button
+            component="a"
+            href="https://www.linkedin.com/in/dikshant-sharma-/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <Typography variant="body1">Linkedin</Typography>
             <img src={linkedinLogo} alt=""></img>
           </Button>
-          <Button>
+          <Button
+            component="a"
+            href="https://github.com/sdikshant89"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <Typography variant="body1">Github</Typography>
+            <img
+              src={gitLogo}
+              alt=""
+              style={{
+                width: '1.05rem',
+              }}
+            ></img>
           </Button>
           <Button>
             <Typography variant="body1">Say Hi!</Typography>
