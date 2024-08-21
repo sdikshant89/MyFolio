@@ -19,7 +19,7 @@ export default function AppHeader() {
         <Typography
           variant="h4"
           component="div"
-          sx={{ flexGrow: 1, fontWeight: '700', fontSize: '4vh' }}
+          sx={{ flexGrow: 1, fontWeight: '500', fontSize: '4vh' }}
         >
           Dikshant.S
         </Typography>
@@ -27,6 +27,7 @@ export default function AppHeader() {
           sx={{
             display: 'flex',
             justifyContent: 'space-between',
+            gap: '1vw',
             '& .MuiTypography-root': {
               fontWeight: 400,
               color: '#61A9F1',
@@ -38,7 +39,7 @@ export default function AppHeader() {
               '&:hover': {
                 '& .MuiTypography-root': {
                   fontSize: '1.2rem',
-                  fontWeight: 700,
+                  fontWeight: 800,
                 },
               },
               '& img': {
