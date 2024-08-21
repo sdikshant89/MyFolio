@@ -1,21 +1,76 @@
+import { Box } from '@mui/material';
 import AppBar from '@mui/material/AppBar';
 import Button from '@mui/material/Button';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import * as React from 'react';
+import linkedinLogo from '../logos/LI-In-Bug.png';
+import hiLogo from '../logos/hi.gif';
 
 export default function AppHeader() {
   return (
     <AppBar position="static">
-      <Toolbar>
+      <Toolbar
+        sx={{
+          height: '15vh',
+        }}
+      >
         <Typography
-          variant="h5"
+          variant="h4"
           component="div"
-          sx={{ flexGrow: 1, color: 'black' }}
+          sx={{ flexGrow: 1, fontWeight: '700', fontSize: '5vh' }}
         >
-          Dikshant Sharma
+          Dikshant.S
         </Typography>
-        <Button>Login</Button>
+        <Box
+          sx={{
+            display: 'flex',
+            justifyContent: 'space-between',
+            '& .MuiButton-root': {
+              display: 'flex',
+              alignItems: 'center',
+              gap: '.25vw',
+              '&:hover': {
+                '& .MuiTypography-root': {
+                  fontSize: '1.2rem',
+                  fontWeight: '700',
+                },
+                '& .hover-image': {
+                  animationPlayState: 'paused', // Start animation on hover
+                },
+              },
+              '& img': {
+                width: '1.2rem', // Adjust the logo size to match font size (rem is relative to root)
+                height: 'auto',
+                animationPlayState: 'paused',
+              },
+            },
+            // '& .hover-image': {
+            //   width: '1.2rem', // Adjust the logo size to match font size (rem is relative to root)
+            //   height: 'auto', // Maintain aspect ratio
+            //    // Pause animation by default
+            //   transition: 'animation 0.3s ease', // Smooth transition
+            // },
+          }}
+        >
+          <Button>
+            <Typography variant="body1">Projects</Typography>
+          </Button>
+          <Button>
+            <Typography variant="body1">About</Typography>
+          </Button>
+          <Button>
+            <Typography variant="body1">Linkedin</Typography>
+            <img src={linkedinLogo} alt=""></img>
+          </Button>
+          <Button>
+            <Typography variant="body1">Github</Typography>
+          </Button>
+          <Button>
+            <Typography variant="body1">Say Hi!</Typography>
+            <img src={hiLogo} alt=""></img>
+          </Button>
+        </Box>
       </Toolbar>
     </AppBar>
   );
