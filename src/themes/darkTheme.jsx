@@ -13,7 +13,7 @@ export const darkTheme = createTheme({
   palette: {
     // Default background color for the whole page
     background: {
-      default: '#09042e',
+      default: '#101214',
     },
   },
   components: {

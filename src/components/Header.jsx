@@ -8,6 +8,41 @@ import linkedinLogo from '../logos/LI-In-Bug.png';
 import gitLogo from '../logos/github-color.svg';
 import hiLogo from '../logos/hi.gif';
 
+const headerStyles = {
+  heading: {
+    flexGrow: 1,
+    fontWeight: '500',
+    fontSize: '3.5vh',
+    fontFamily: 'Source Code Pro Variable, Poppins, sen, Arial',
+    userSelect: 'none',
+  },
+  buttonsContainer: {
+    display: 'flex',
+    justifyContent: 'space-between',
+    gap: '1vw',
+    '& .MuiTypography-root': {
+      fontWeight: 400,
+      color: 'lightBlue',
+    },
+    '& .MuiButton-root': {
+      display: 'flex',
+      alignItems: 'center',
+      gap: '.25vw',
+      '&:hover': {
+        '& .MuiTypography-root': {
+          fontSize: '1.2rem',
+          fontWeight: 800,
+        },
+      },
+      '& img': {
+        width: '1.2rem', // Adjust the logo size to match font size (rem is relative to root)
+        height: 'auto',
+        animationPlayState: 'paused',
+      },
+    },
+  },
+};
+
 export default function AppHeader() {
   return (
     <AppBar position="static">
@@ -16,17 +51,7 @@ export default function AppHeader() {
           height: '15vh',
         }}
       >
-        <Typography
-          variant="h4"
-          component="div"
-          sx={{
-            flexGrow: 1,
-            fontWeight: '500',
-            fontSize: '3.5vh',
-            fontFamily: 'Source Code Pro Variable, Poppins, sen, Arial',
-            userSelect: 'none',
-          }}
-        >
+        <Typography variant="h4" component="div" sx={headerStyles.heading}>
           <Box component="span" sx={{ color: '#33FF57' }}>
             &lt;
           </Box>
@@ -43,38 +68,12 @@ export default function AppHeader() {
             &gt;
           </Box>
         </Typography>
-        <Box
-          sx={{
-            display: 'flex',
-            justifyContent: 'space-between',
-            gap: '1vw',
-            '& .MuiTypography-root': {
-              fontWeight: 400,
-              color: '#61A9F1',
-            },
-            '& .MuiButton-root': {
-              display: 'flex',
-              alignItems: 'center',
-              gap: '.25vw',
-              '&:hover': {
-                '& .MuiTypography-root': {
-                  fontSize: '1.2rem',
-                  fontWeight: 800,
-                },
-              },
-              '& img': {
-                width: '1.2rem', // Adjust the logo size to match font size (rem is relative to root)
-                height: 'auto',
-                animationPlayState: 'paused',
-              },
-            },
-          }}
-        >
+        <Box sx={headerStyles.buttonsContainer}>
           <Button>
-            <Typography variant="body1">Projects</Typography>
+            <Typography>Projects</Typography>
           </Button>
           <Button>
-            <Typography variant="body1">About</Typography>
+            <Typography>About</Typography>
           </Button>
           <Button
             component="a"
@@ -82,7 +81,7 @@ export default function AppHeader() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <Typography variant="body1">Linkedin</Typography>
+            <Typography>Linkedin</Typography>
             <img src={linkedinLogo} alt=""></img>
           </Button>
           <Button
@@ -91,7 +90,7 @@ export default function AppHeader() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <Typography variant="body1">Github</Typography>
+            <Typography>Github</Typography>
             <img
               src={gitLogo}
               alt=""
@@ -101,7 +100,7 @@ export default function AppHeader() {
             ></img>
           </Button>
           <Button>
-            <Typography variant="body1">Say Hi!</Typography>
+            <Typography>Say Hi!</Typography>
             <img src={hiLogo} alt=""></img>
           </Button>
         </Box>
