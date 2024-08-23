@@ -1,4 +1,5 @@
 import { Box } from '@mui/material';
+import Footer from '../components/Footer';
 import AppHeader from '../components/Header';
 import WelcomePage from './WelcomePage';
 import WorkExPage from './WorkExPage';
@@ -21,6 +22,7 @@ function MainPage(props) {
       <AppHeader />
       <WelcomePage />
       <WorkExPage />
+      <Footer />
     </Box>
   );
 }

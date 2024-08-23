@@ -1,4 +1,4 @@
-import { Box, Button, Typography } from '@mui/material';
+import { Box, Typography } from '@mui/material';
 import CppIcon from '../logos/skills/c-sharp.png';
 import CSSIcon from '../logos/skills/css.png';
 import GitIcon from '../logos/skills/git.png';
@@ -113,90 +113,80 @@ function WelcomePage(props) {
             sx={{
               display: 'flex',
               justifyContent: 'flex-end',
-              gap: '2vw',
+              gap: '5vw',
               marginTop: '2vh',
             }}
           >
-            <Button
-              component="a"
+            <a
               href="https://www.python.org/"
               target="_blank"
               rel="noopener noreferrer"
             >
               <img src={PyIcon} alt="" style={pageStyles.logos}></img>
-            </Button>
-            <Button
-              component="a"
+            </a>
+            <a
               href="https://www.mysql.com/"
               target="_blank"
               rel="noopener noreferrer"
             >
               <img src={SqlIcon} alt="" style={pageStyles.logos}></img>
-            </Button>
-            <Button
-              component="a"
+            </a>
+            <a
               href="https://nodejs.org/en"
               target="_blank"
               rel="noopener noreferrer"
             >
               <img src={JsIcon} alt="" style={pageStyles.logos}></img>
-            </Button>
-            <Button
-              component="a"
+            </a>
+            <a
               href="https://developer.mozilla.org/en-US/docs/Web/HTML"
               target="_blank"
               rel="noopener noreferrer"
             >
               <img src={HTMLIcon} alt="" style={pageStyles.logos}></img>
-            </Button>
-            <Button
-              component="a"
+            </a>
+            <a
               href="https://www.atlassian.com/software/jira"
               target="_blank"
               rel="noopener noreferrer"
             >
               <img src={JiraIcon} alt="" style={pageStyles.logos}></img>
-            </Button>
-            <Button
-              component="a"
+            </a>
+            <a
               href="https://react.dev/"
               target="_blank"
               rel="noopener noreferrer"
             >
               <img src={ReactIcon} alt="" style={pageStyles.logos}></img>
-            </Button>
-            <Button
-              component="a"
+            </a>
+            <a
               href="https://www.java.com/en/"
               target="_blank"
               rel="noopener noreferrer"
             >
               <img src={JavaIcon} alt="" style={pageStyles.logos}></img>
-            </Button>
-            <Button
-              component="a"
+            </a>
+            <a
               href="https://learn.microsoft.com/en-us/dotnet/csharp/tour-of-csharp/overview"
               target="_blank"
               rel="noopener noreferrer"
             >
               <img src={CppIcon} alt="" style={pageStyles.logos}></img>
-            </Button>
-            <Button
-              component="a"
+            </a>
+            <a
               href="https://git-scm.com/"
               target="_blank"
               rel="noopener noreferrer"
             >
               <img src={GitIcon} alt="" style={pageStyles.logos}></img>
-            </Button>
-            <Button
-              component="a"
+            </a>
+            <a
               href="https://developer.mozilla.org/en-US/docs/Web/CSS"
               target="_blank"
               rel="noopener noreferrer"
             >
               <img src={CSSIcon} alt="" style={pageStyles.logos}></img>
-            </Button>
+            </a>
           </Box>
         </Box>
         <Box container="span"></Box>

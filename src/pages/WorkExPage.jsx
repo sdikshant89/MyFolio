@@ -6,6 +6,7 @@ const pageStyles = {
     width: '100%',
     height: '85vh', //Total height (minus) AppHeader height
     position: 'relative',
+    userSelect: 'none',
   },
   head: {
     color: 'darkgrey',
