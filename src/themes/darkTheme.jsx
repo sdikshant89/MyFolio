@@ -28,7 +28,7 @@ export const darkTheme = createTheme({
     MuiAppBar: {
       styleOverrides: {
         root: {
-          backgroundColor: 'transparent',
+          backgroundColor: 'rgba(16,18,20,0.95)',
           // Color of all the text in appBar
           color: '#bad7d6',
         },

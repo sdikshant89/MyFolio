@@ -24,7 +24,8 @@ const pageStyles = {
   container: {
     width: '100%',
     height: '85vh', //Total height (minus) AppHeader height
-    position: 'absolute',
+    position: 'relative',
+    marginTop: '15vh',
   },
   myName: {
     color: 'white',
@@ -76,12 +77,11 @@ document.head.insertAdjacentHTML(
 
 function WelcomePage(props) {
   return (
-    <Box sx={pageStyles.container}>
+    <Box sx={pageStyles.container} className="WecomePageContainer">
       <Typography sx={pageStyles.backgroundText}>Hey!</Typography>
       <Box
         container="div"
         sx={{
-          outline: true,
           height: '50vh',
           width: '60vw',
           zIndex: 5,

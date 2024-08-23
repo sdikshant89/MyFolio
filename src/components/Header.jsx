@@ -45,7 +45,7 @@ const headerStyles = {
 
 export default function AppHeader() {
   return (
-    <AppBar position="static">
+    <AppBar>
       <Toolbar
         sx={{
           height: '15vh',
