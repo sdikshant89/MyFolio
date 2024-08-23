@@ -56,10 +56,10 @@ export default function AppHeader() {
             &lt;
           </Box>
           <Box component="span" sx={{ color: 'lightgrey' }}>
-            Hello
+            D
           </Box>
           <Box component="span" sx={{ color: 'white' }}>
-            , World
+            .Sharma
           </Box>
           <Box component="span" sx={{ color: 'orange' }}>
             !

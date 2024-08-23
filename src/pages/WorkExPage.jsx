@@ -46,16 +46,22 @@ function WorkExPage(props) {
           number="01"
           compName="The Chokka Center"
           position="Software Developer Intern"
+          location="Edmonton, AB, Canada"
+          year="Jan 2024 - Present"
         />
         <WorkExCards
           number="02"
           compName="Highradius Technologies"
           position="Associate Software Engineer I"
+          location="Hyderabad, Telangana, India"
+          year="July 2022 - Aug. 2023"
         />
         <WorkExCards
           number="03"
           compName="Highradius Technologies"
           position="Software Engineer Intern"
+          location="Bhubaneswar, Odisha, India"
+          year="April 2021 - June 2022"
         />
       </Box>
     </Box>
