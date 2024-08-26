@@ -31,8 +31,9 @@ const pageStyles = {
     color: 'white',
     userSelect: 'none',
     fontWeight: '700',
-    fontSize: '4rem',
+    fontSize: '5rem',
     textAlign: 'right',
+    wordWrap: 'break-word',
   },
   logos: {
     width: '1.5rem',
@@ -100,12 +101,19 @@ function WelcomePage(props) {
                 color: 'lightgrey',
                 textAlign: 'right',
                 userSelect: 'none',
+                fontSize: '1.3rem',
               }}
             >
-              It is a long established fact that a reader will be distracted by
-              the readable content of a page when looking at its layout. The
-              point of using Lorem Ipsum is that it has a more-or-less normal
-              distribution of letters, as opposed to using 'Content here,
+              I'm a{' '}
+              <span
+                style={{ fontWeight: 700, color: 'white', fontStyle: 'italic' }}
+              >
+                Full-stack developer
+              </span>{' '}
+              with hands-on experience in crafting scalable full stack web
+              applications. Proficient in both frontend and backend
+              technologies, committed to continuous learning and creating
+              impactful software solutions that meet diverse user needs.
             </Typography>
           </Box>
           <Box

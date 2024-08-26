@@ -4,7 +4,6 @@ import WorkExCards from '../components/WorkExCards';
 const pageStyles = {
   container: {
     width: '100%',
-    height: '85vh', //Total height (minus) AppHeader height
     position: 'relative',
     userSelect: 'none',
   },
@@ -49,6 +48,7 @@ function WorkExPage(props) {
           position="Software Developer Intern"
           location="Edmonton, AB, Canada"
           year="Jan 2024 - Present"
+          desc="Developed a microservice using Express and Node.js for mental health assessment and prediction, enhancing clinic software for improved patient record management and user experience."
         />
         <WorkExCards
           number="02"
@@ -56,6 +56,7 @@ function WorkExPage(props) {
           position="Associate Software Engineer I"
           location="Hyderabad, Telangana, India"
           year="July 2022 - Aug. 2023"
+          desc="Led Agile practices and facilitated the migration of B2B payment systems to modern tech stack, resolving 150+ bugs and integrating JUnit testing across backend projects for enhanced efficiency."
         />
         <WorkExCards
           number="03"
@@ -63,6 +64,7 @@ function WorkExPage(props) {
           position="Software Engineer Intern"
           location="Bhubaneswar, Odisha, India"
           year="April 2021 - June 2022"
+          desc="Developed a full-stack web app with React, SQL, and JDBC for managing B2B invoices, including features like invoice status management and dispute initiation. Also created a machine learning model to predict customer churn and estimate accounts receivable."
         />
       </Box>
     </Box>

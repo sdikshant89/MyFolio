@@ -1,4 +1,8 @@
-import { Box, Typography } from '@mui/material';
+import CloseIcon from '@mui/icons-material/Close';
+import { Box, Button, Typography } from '@mui/material';
+import IconButton from '@mui/material/IconButton';
+import Snackbar from '@mui/material/Snackbar';
+import * as React from 'react';
 import gitLogo from '../logos/github-color.svg';
 import linkedinLogo from '../logos/LI-In-Bug.png';
 
@@ -24,6 +28,42 @@ const footerStyles = {
 };
 
 export default function Footer() {
+  const [open, setOpen] = React.useState(false);
+
+  const phoneNumber = '+17807168714';
+
+  const handleClick = () => {
+    navigator.clipboard
+      .writeText(phoneNumber)
+      .then(() => {
+        setOpen(true);
+      })
+      .catch((err) => {
+        console.error('Failed to copy: ', err);
+      });
+  };
+
+  const handleClose = (event, reason) => {
+    if (reason === 'clickaway') {
+      return;
+    }
+
+    setOpen(false);
+  };
+
+  const action = (
+    <React.Fragment>
+      <IconButton
+        size="small"
+        aria-label="close"
+        color="inherit"
+        onClick={handleClose}
+      >
+        <CloseIcon fontSize="small" />
+      </IconButton>
+    </React.Fragment>
+  );
+
   return (
     <Box>
       <Box sx={footerStyles.container}>
@@ -86,7 +126,89 @@ export default function Footer() {
             Created by Dikshant Sharma
           </Typography>
         </Box>
-        <Box sx={{ width: '50%' }}></Box>
+        <Box
+          sx={{
+            width: '50%',
+            display: 'flex',
+            justifyContent: 'flex-end',
+          }}
+        >
+          <Box
+            component="div"
+            sx={{
+              width: '50%',
+              display: 'flex',
+              flexDirection: 'column',
+              marginTop: '8vh',
+              marginLeft: '25vw',
+              gap: 4,
+              alignItems: 'flex-start',
+            }}
+          >
+            <Button>
+              <Typography sx={{ color: 'white', fontSize: '1rem' }}>
+                Home
+              </Typography>
+            </Button>
+            <Button>
+              <Typography sx={{ color: 'white', fontSize: '1rem' }}>
+                Work Ex.
+              </Typography>
+            </Button>
+            <Button>
+              <Typography sx={{ color: 'white', fontSize: '1rem' }}>
+                Projects
+              </Typography>
+            </Button>
+            <Button>
+              <Typography
+                sx={{ color: 'white', fontSize: '1rem' }}
+              ></Typography>
+            </Button>
+          </Box>
+          <Box
+            component="div"
+            sx={{
+              width: '50%',
+              display: 'flex',
+              flexDirection: 'column',
+              marginTop: '8vh',
+              marginLeft: '-5vw',
+              gap: 4,
+              alignItems: 'flex-start',
+            }}
+          >
+            <Button
+              component="a"
+              href="mailto:sharma.dshan@gmail.com"
+              sx={{ textDecoration: 'none' }}
+            >
+              <Typography sx={{ color: 'white', fontSize: '1rem' }}>
+                Email
+              </Typography>
+            </Button>
+            <Button onClick={handleClick}>
+              <Typography sx={{ color: 'white', fontSize: '1rem' }}>
+                Phone
+              </Typography>
+            </Button>
+            <Snackbar
+              open={open}
+              autoHideDuration={6000}
+              onClose={handleClose}
+              message="Copied to clipboard"
+              action={action}
+              ContentProps={{
+                sx: {
+                  backgroundColor: '#181823',
+                  border: '2px solid #4e5fdc', // Border color and width
+                  borderRadius: '4px',
+                  color: 'white',
+                },
+              }}
+            />
+          </Box>
+        </Box>
       </Box>
       <Box sx={{ backgroundColor: '#4e5fdc' }}>
         <Typography

@@ -5,6 +5,7 @@ import { Box, Card, CardContent, Typography } from '@mui/material';
 const cardStyles = {
   container: {
     background: 'transparent',
+    width: '25vw',
   },
   content: {
     display: 'flex',
@@ -15,6 +16,8 @@ const cardStyles = {
     wordWrap: 'break-word',
     fontWeight: 300,
     fontSize: '1.1rem',
+    overflowY: 'auto', // Enable vertical scrolling
+    height: '5vh',
   },
   cardNum: {
     color: 'grey',
@@ -45,10 +48,7 @@ function WorkExCards(props) {
           </span>
           , {props.position}
         </Typography>
-        <Typography sx={cardStyles.desc}>
-          I made something, did something and tried something, pretty good,
-          pretty nice, bbye
-        </Typography>
+        <Typography sx={cardStyles.desc}>{props.desc}</Typography>
 
         <Box
           sx={{
