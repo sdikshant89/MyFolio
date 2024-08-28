@@ -215,8 +215,6 @@ export default function Footer() {
             border: '2px solid #4e5fdc', // Border color and width
             borderRadius: '4px',
             color: 'white',
-            zIndex: 999,
-            position: 'fixed',
           },
         }}
       />
@@ -225,7 +223,6 @@ export default function Footer() {
           backgroundColor: '#4e5fdc',
           position: 'sticky',
           minWidth: '900px',
-          zIndex: 1,
         }}
       >
         <Typography
