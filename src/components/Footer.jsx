@@ -200,29 +200,32 @@ export default function Footer() {
                 Phone
               </Typography>
             </Button>
-            <Snackbar
-              open={open}
-              autoHideDuration={6000}
-              onClose={handleClose}
-              message="Copied to clipboard"
-              action={action}
-              ContentProps={{
-                sx: {
-                  backgroundColor: '#181823',
-                  border: '2px solid #4e5fdc', // Border color and width
-                  borderRadius: '4px',
-                  color: 'white',
-                },
-              }}
-            />
           </Box>
         </Box>
       </Box>
+      <Snackbar
+        open={open}
+        autoHideDuration={6000}
+        onClose={handleClose}
+        message="Copied to clipboard"
+        action={action}
+        ContentProps={{
+          sx: {
+            backgroundColor: '#181823',
+            border: '2px solid #4e5fdc', // Border color and width
+            borderRadius: '4px',
+            color: 'white',
+            zIndex: 999,
+            position: 'fixed',
+          },
+        }}
+      />
       <Box
         sx={{
           backgroundColor: '#4e5fdc',
           position: 'sticky',
           minWidth: '900px',
+          zIndex: 1,
         }}
       >
         <Typography
