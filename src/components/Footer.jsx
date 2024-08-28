@@ -10,12 +10,14 @@ const footerStyles = {
   container: {
     width: '100%',
     height: '45vh', //Total height (minus) AppHeader height
-    position: 'relative',
-    marginTop: '15vh',
+    position: 'sticky',
+    marginTop: '10vh',
     backgroundColor: '#181823',
     display: 'flex',
     justifyContent: 'space-between',
     userSelect: 'none',
+    minHeight: '450px',
+    minWidth: '900px',
   },
   maName: {
     color: 'white',
@@ -65,7 +67,13 @@ export default function Footer() {
   );
 
   return (
-    <Box>
+    <Box
+      sx={{
+        flex: '1',
+        display: 'flex',
+        flexDirection: 'column',
+      }}
+    >
       <Box sx={footerStyles.container}>
         <Box sx={{ width: '50%' }}>
           <Typography sx={footerStyles.maName}>Dikshant S.</Typography>
@@ -210,7 +218,13 @@ export default function Footer() {
           </Box>
         </Box>
       </Box>
-      <Box sx={{ backgroundColor: '#4e5fdc' }}>
+      <Box
+        sx={{
+          backgroundColor: '#4e5fdc',
+          position: 'sticky',
+          minWidth: '900px',
+        }}
+      >
         <Typography
           sx={{
             color: 'white',

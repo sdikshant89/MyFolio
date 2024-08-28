@@ -28,8 +28,16 @@ function MainPage(props) {
     >
       <InitialPopup handleClose={handleClose} open={open} />
       <AppHeader />
-      <WelcomePage />
-      <WorkExPage />
+      <Box
+        sx={{
+          flex: '1',
+          display: 'flex',
+          flexDirection: 'column',
+        }}
+      >
+        <WelcomePage />
+        <WorkExPage />
+      </Box>
       <Footer />
     </Box>
   );

@@ -10,14 +10,20 @@ const cardStyles = {
   content: {
     display: 'flex',
     flexDirection: 'column',
+    minWidth: '400px',
   },
   desc: {
     color: 'white',
     wordWrap: 'break-word',
     fontWeight: 300,
     fontSize: '1.1rem',
-    overflowY: 'auto', // Enable vertical scrolling
+    overflowY: 'auto',
     height: '5vh',
+    '&::-webkit-scrollbar': {
+      display: 'none', // Hides the scrollbar
+    },
+    /* Firefox */
+    scrollbarWidth: 'none', // Hides the scrollbar
   },
   cardNum: {
     color: 'grey',

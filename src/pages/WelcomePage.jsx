@@ -22,10 +22,11 @@ const pageStyles = {
     animation: 'fadeInFromLeft 1s ease-out',
   },
   container: {
-    width: '100%',
-    height: '85vh', //Total height (minus) AppHeader height
-    position: 'relative',
+    width: '100vw',
+    height: '85vh',
+    position: 'sticky',
     marginTop: '15vh',
+    minHeight: '600px',
   },
   myName: {
     color: 'white',
@@ -81,7 +82,7 @@ function WelcomePage(props) {
     <Box sx={pageStyles.container} className="WecomePageContainer">
       <Typography sx={pageStyles.backgroundText}>Hey!</Typography>
       <Box
-        container="div"
+        container="span"
         sx={{
           height: '50vh',
           width: '60vw',
@@ -89,115 +90,113 @@ function WelcomePage(props) {
           position: 'relative',
           margin: '25vh 10vw',
           animation: 'fadeInFromRight 1s ease-out',
+          minWidth: '950px',
         }}
       >
-        <Box container="span">
-          <Box container="div">
-            <Typography sx={pageStyles.myName}>I'm Dikshant Sharma</Typography>
-          </Box>
-          <Box container="div">
-            <Typography
-              sx={{
-                color: 'lightgrey',
-                textAlign: 'right',
-                userSelect: 'none',
-                fontSize: '1.3rem',
-              }}
-            >
-              I'm a{' '}
-              <span
-                style={{ fontWeight: 700, color: 'white', fontStyle: 'italic' }}
-              >
-                Full-stack developer
-              </span>{' '}
-              with hands-on experience in crafting scalable full stack web
-              applications. Proficient in both frontend and backend
-              technologies, committed to continuous learning and creating
-              impactful software solutions that meet diverse user needs.
-            </Typography>
-          </Box>
-          <Box
-            container="div"
+        <Box container="div">
+          <Typography sx={pageStyles.myName}>I'm Dikshant Sharma</Typography>
+        </Box>
+        <Box container="div">
+          <Typography
             sx={{
-              display: 'flex',
-              justifyContent: 'flex-end',
-              gap: '5vw',
-              marginTop: '2vh',
+              color: 'lightgrey',
+              textAlign: 'right',
+              userSelect: 'none',
+              fontSize: '1.3rem',
             }}
           >
-            <a
-              href="https://www.python.org/"
-              target="_blank"
-              rel="noopener noreferrer"
+            I'm a{' '}
+            <span
+              style={{ fontWeight: 700, color: 'white', fontStyle: 'italic' }}
             >
-              <img src={PyIcon} alt="" style={pageStyles.logos}></img>
-            </a>
-            <a
-              href="https://www.mysql.com/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <img src={SqlIcon} alt="" style={pageStyles.logos}></img>
-            </a>
-            <a
-              href="https://nodejs.org/en"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <img src={JsIcon} alt="" style={pageStyles.logos}></img>
-            </a>
-            <a
-              href="https://developer.mozilla.org/en-US/docs/Web/HTML"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <img src={HTMLIcon} alt="" style={pageStyles.logos}></img>
-            </a>
-            <a
-              href="https://www.atlassian.com/software/jira"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <img src={JiraIcon} alt="" style={pageStyles.logos}></img>
-            </a>
-            <a
-              href="https://react.dev/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <img src={ReactIcon} alt="" style={pageStyles.logos}></img>
-            </a>
-            <a
-              href="https://www.java.com/en/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <img src={JavaIcon} alt="" style={pageStyles.logos}></img>
-            </a>
-            <a
-              href="https://learn.microsoft.com/en-us/dotnet/csharp/tour-of-csharp/overview"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <img src={CppIcon} alt="" style={pageStyles.logos}></img>
-            </a>
-            <a
-              href="https://git-scm.com/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <img src={GitIcon} alt="" style={pageStyles.logos}></img>
-            </a>
-            <a
-              href="https://developer.mozilla.org/en-US/docs/Web/CSS"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <img src={CSSIcon} alt="" style={pageStyles.logos}></img>
-            </a>
-          </Box>
+              Full-stack developer
+            </span>{' '}
+            with hands-on experience in crafting scalable full stack web
+            applications. Proficient in both frontend and backend technologies,
+            committed to continuous learning and creating impactful software
+            solutions that meet diverse user needs.
+          </Typography>
         </Box>
-        <Box container="span"></Box>
+        <Box
+          container="div"
+          sx={{
+            display: 'flex',
+            justifyContent: 'flex-end',
+            gap: '5vw',
+            marginTop: '2vh',
+          }}
+        >
+          <a
+            href="https://www.python.org/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img src={PyIcon} alt="" style={pageStyles.logos}></img>
+          </a>
+          <a
+            href="https://www.mysql.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img src={SqlIcon} alt="" style={pageStyles.logos}></img>
+          </a>
+          <a
+            href="https://nodejs.org/en"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img src={JsIcon} alt="" style={pageStyles.logos}></img>
+          </a>
+          <a
+            href="https://developer.mozilla.org/en-US/docs/Web/HTML"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img src={HTMLIcon} alt="" style={pageStyles.logos}></img>
+          </a>
+          <a
+            href="https://www.atlassian.com/software/jira"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img src={JiraIcon} alt="" style={pageStyles.logos}></img>
+          </a>
+          <a
+            href="https://react.dev/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img src={ReactIcon} alt="" style={pageStyles.logos}></img>
+          </a>
+          <a
+            href="https://www.java.com/en/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img src={JavaIcon} alt="" style={pageStyles.logos}></img>
+          </a>
+          <a
+            href="https://learn.microsoft.com/en-us/dotnet/csharp/tour-of-csharp/overview"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img src={CppIcon} alt="" style={pageStyles.logos}></img>
+          </a>
+          <a
+            href="https://git-scm.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img src={GitIcon} alt="" style={pageStyles.logos}></img>
+          </a>
+          <a
+            href="https://developer.mozilla.org/en-US/docs/Web/CSS"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img src={CSSIcon} alt="" style={pageStyles.logos}></img>
+          </a>
+        </Box>
       </Box>
     </Box>
   );

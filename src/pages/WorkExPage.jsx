@@ -3,9 +3,11 @@ import WorkExCards from '../components/WorkExCards';
 
 const pageStyles = {
   container: {
-    width: '100%',
-    position: 'relative',
+    width: '100vw',
+    position: 'sticky',
     userSelect: 'none',
+    zIndex: 5,
+    minHeight: '800px',
   },
   head: {
     color: 'darkgrey',
@@ -18,7 +20,8 @@ const pageStyles = {
     fontWeight: '700',
     fontSize: '4rem',
     marginLeft: '8vw',
-    maxWidth: '50vw', // Set the maximum width for the text
+    minWidth: '900px',
+    maxWidth: '50vw',
     wordWrap: 'break-word',
   },
   cardBox: {
