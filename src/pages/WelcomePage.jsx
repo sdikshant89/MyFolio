@@ -88,7 +88,7 @@ function WelcomePage(props) {
           width: '60vw',
           zIndex: 5,
           position: 'relative',
-          margin: '25vh 20vw',
+          margin: '25vh 20vw 10vh 10vw',
           animation: 'fadeInFromRight 1s ease-out',
           minWidth: '950px',
         }}
