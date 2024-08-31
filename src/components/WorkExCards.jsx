@@ -6,6 +6,7 @@ const cardStyles = {
   container: {
     background: 'transparent',
     width: '25vw',
+    minWidth: '400px',
   },
   content: {
     display: 'flex',
@@ -27,8 +28,8 @@ const cardStyles = {
   },
   cardNum: {
     color: 'grey',
-    fontWeight: '400',
-    fontSize: '11rem',
+    fontWeight: '300',
+    fontSize: '13rem',
     lineHeight: 1,
   },
 };
@@ -54,8 +55,6 @@ function WorkExCards(props) {
           </span>
           , {props.position}
         </Typography>
-        <Typography sx={cardStyles.desc}>{props.desc}</Typography>
-
         <Box
           sx={{
             display: 'flex',

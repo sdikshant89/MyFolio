@@ -17,7 +17,6 @@ const footerStyles = {
     justifyContent: 'space-between',
     userSelect: 'none',
     minHeight: '450px',
-    minWidth: '900px',
   },
   maName: {
     color: 'white',
@@ -29,7 +28,7 @@ const footerStyles = {
   },
 };
 
-export default function Footer() {
+export default function Footer({ scrollToSection }) {
   const [open, setOpen] = React.useState(false);
 
   const phoneNumber = '+17807168714';
@@ -72,7 +71,9 @@ export default function Footer() {
         flex: '1',
         display: 'flex',
         flexDirection: 'column',
+        width: '100vw',
       }}
+      id="AppFooter"
     >
       <Box sx={footerStyles.container}>
         <Box sx={{ width: '50%' }}>
@@ -153,12 +154,12 @@ export default function Footer() {
               alignItems: 'flex-start',
             }}
           >
-            <Button>
+            <Button onClick={() => scrollToSection('WelcomePageContainer')}>
               <Typography sx={{ color: 'white', fontSize: '1rem' }}>
                 Home
               </Typography>
             </Button>
-            <Button>
+            <Button onClick={() => scrollToSection('WorkExPage')}>
               <Typography sx={{ color: 'white', fontSize: '1rem' }}>
                 Work Ex.
               </Typography>
@@ -166,6 +167,11 @@ export default function Footer() {
             <Button>
               <Typography sx={{ color: 'white', fontSize: '1rem' }}>
                 Projects
+              </Typography>
+            </Button>
+            <Button onClick={() => scrollToSection('SkillsPageContainer')}>
+              <Typography sx={{ color: 'white', fontSize: '1rem' }}>
+                Skills
               </Typography>
             </Button>
             <Button>
@@ -222,7 +228,7 @@ export default function Footer() {
         sx={{
           backgroundColor: '#4e5fdc',
           position: 'sticky',
-          minWidth: '900px',
+          width: '100%',
         }}
       >
         <Typography

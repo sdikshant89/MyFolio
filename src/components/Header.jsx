@@ -7,6 +7,8 @@ import * as React from 'react';
 import linkedinLogo from '../logos/LI-In-Bug.png';
 import gitLogo from '../logos/github-color.svg';
 import hiLogo from '../logos/hi.gif';
+import InfoIcon from '../logos/info_icon.png';
+import ProjectIcon from '../logos/project_icon.png';
 
 const headerStyles = {
   heading: {
@@ -43,7 +45,7 @@ const headerStyles = {
   },
 };
 
-export default function AppHeader() {
+export default function AppHeader({ scrollToSection }) {
   return (
     <AppBar>
       <Toolbar
@@ -71,9 +73,11 @@ export default function AppHeader() {
         <Box sx={headerStyles.buttonsContainer}>
           <Button>
             <Typography>Projects</Typography>
+            <img src={ProjectIcon} alt=""></img>
           </Button>
-          <Button>
+          <Button onClick={() => scrollToSection('AppFooter')}>
             <Typography>About</Typography>
+            <img src={InfoIcon} alt=""></img>
           </Button>
           <Button
             component="a"

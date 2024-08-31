@@ -14,7 +14,7 @@ const pageStyles = {
   backgroundText: {
     color: '#242526',
     fontWeight: 700,
-    fontSize: '28rem',
+    fontSize: '29rem',
     lineHeight: 0.75,
     userSelect: 'none',
     position: 'absolute',
@@ -22,11 +22,12 @@ const pageStyles = {
     animation: 'fadeInFromLeft 1s ease-out',
   },
   container: {
-    width: '100vw',
+    width: '100%',
     height: '85vh',
     position: 'sticky',
     marginTop: '15vh',
-    minHeight: '600px',
+    minHeight: '800px',
+    maxHeight: '800px',
   },
   myName: {
     color: 'white',
@@ -34,7 +35,6 @@ const pageStyles = {
     fontWeight: '700',
     fontSize: '5rem',
     textAlign: 'right',
-    wordWrap: 'break-word',
   },
   logos: {
     width: '1.5rem',
@@ -79,7 +79,7 @@ document.head.insertAdjacentHTML(
 
 function WelcomePage(props) {
   return (
-    <Box sx={pageStyles.container} className="WecomePageContainer">
+    <Box sx={pageStyles.container}>
       <Typography sx={pageStyles.backgroundText}>Hey!</Typography>
       <Box
         container="span"
@@ -88,7 +88,7 @@ function WelcomePage(props) {
           width: '60vw',
           zIndex: 5,
           position: 'relative',
-          margin: '25vh 10vw',
+          margin: '25vh 20vw',
           animation: 'fadeInFromRight 1s ease-out',
           minWidth: '950px',
         }}

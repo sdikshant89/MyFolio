@@ -3,11 +3,13 @@ import WorkExCards from '../components/WorkExCards';
 
 const pageStyles = {
   container: {
-    width: '100vw',
+    width: '100%',
     position: 'sticky',
     userSelect: 'none',
     zIndex: 5,
     minHeight: '800px',
+    minWidth: '900px',
+    paddingTop: '20vh',
   },
   head: {
     color: 'darkgrey',
@@ -20,9 +22,8 @@ const pageStyles = {
     fontWeight: '700',
     fontSize: '4rem',
     marginLeft: '8vw',
-    minWidth: '900px',
     maxWidth: '50vw',
-    wordWrap: 'break-word',
+    minWidth: '500px',
   },
   cardBox: {
     display: 'flex',
@@ -30,12 +31,14 @@ const pageStyles = {
     alignItems: 'center',
     margin: '2vh 8vw 2vh 8vw',
     gap: '2vw',
+    minWidth: '900px',
+    overflow: 'auto',
   },
 };
 
 function WorkExPage(props) {
   return (
-    <Box container="div" sx={pageStyles.container}>
+    <Box container="div" sx={pageStyles.container} id="WorkExPage">
       <Box container="div" className="insideBox">
         <Typography sx={pageStyles.head}>Work Experience</Typography>
       </Box>
