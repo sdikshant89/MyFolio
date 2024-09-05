@@ -39,13 +39,21 @@ const headerStyles = {
       '& img': {
         width: '1.2rem', // Adjust the logo size to match font size (rem is relative to root)
         height: 'auto',
-        animationPlayState: 'paused',
       },
     },
   },
 };
 
-export default function AppHeader({ scrollToSection }) {
+export default function AppHeader(props) {
+  const [open, setOpen] = React.useState(false);
+  const handleClickOpen = () => {
+    setOpen(true);
+  };
+
+  const handleClose = () => {
+    setOpen(false);
+  };
+
   return (
     <AppBar>
       <Toolbar
@@ -75,7 +83,7 @@ export default function AppHeader({ scrollToSection }) {
             <Typography>Projects</Typography>
             <img src={ProjectIcon} alt=""></img>
           </Button>
-          <Button onClick={() => scrollToSection('AppFooter')}>
+          <Button onClick={() => props.scrollToSection('AppFooter')}>
             <Typography>About</Typography>
             <img src={InfoIcon} alt=""></img>
           </Button>
@@ -103,7 +111,7 @@ export default function AppHeader({ scrollToSection }) {
               }}
             ></img>
           </Button>
-          <Button>
+          <Button onClick={props.handleOpen}>
             <Typography>Say Hi!</Typography>
             <img src={hiLogo} alt=""></img>
           </Button>

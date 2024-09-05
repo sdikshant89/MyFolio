@@ -90,7 +90,7 @@ function WelcomePage(props) {
           position: 'relative',
           margin: '25vh 20vw 10vh 10vw',
           animation: 'fadeInFromRight 1s ease-out',
-          minWidth: '950px',
+          minWidth: '900px',
         }}
       >
         <Box container="div">

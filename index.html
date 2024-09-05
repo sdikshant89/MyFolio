@@ -7,6 +7,12 @@
     <title>Dikshant S.</title>
     <link rel="stylesheet" href="index.css" />
   </head>
-  <body id="AppBody"></body>
+  <body id="AppBody">
+    <form name="ContactMe" netlify netlify-honeypot="bot-field" hidden>
+      <input type="text" name="name" />
+      <input type="email" name="email" />
+      <textarea name="message"></textarea>
+    </form>
+  </body>
   <script type="module" src="/src/main.jsx"></script>
 </html>

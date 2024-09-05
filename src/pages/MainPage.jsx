@@ -1,8 +1,10 @@
 import { Box } from '@mui/material';
 import * as React from 'react';
+import ContactPopup from '../components/ContactPopup';
 import Footer from '../components/Footer';
 import AppHeader from '../components/Header';
 import InitialPopup from '../components/InitialPopup';
+import EducationPage from './EducationPage';
 import SkillsPage from './SkillsPage';
 import WelcomePage from './WelcomePage';
 import WorkExPage from './WorkExPage';
@@ -16,6 +18,15 @@ function MainPage(props) {
   };
 
   const [open, setOpen] = React.useState(true);
+  const [hiOpen, setHiOpen] = React.useState(false);
+
+  const handleHiOpen = () => {
+    setHiOpen(true);
+  };
+
+  const handleHiClose = () => {
+    setHiOpen(false);
+  };
 
   const handleClose = () => {
     setOpen(false);
@@ -35,7 +46,9 @@ function MainPage(props) {
       }}
     >
       <InitialPopup handleClose={handleClose} open={open} />
-      <AppHeader scrollToSection={scrollToSection} />
+      <ContactPopup handleClose={handleHiClose} open={hiOpen} />
+
+      <AppHeader scrollToSection={scrollToSection} handleOpen={handleHiOpen} />
       <Box
         sx={{
           flex: 1,
@@ -49,6 +62,7 @@ function MainPage(props) {
         <WelcomePage />
         <WorkExPage />
         <SkillsPage />
+        <EducationPage />
         <Footer scrollToSection={scrollToSection} />
       </Box>
     </Box>
