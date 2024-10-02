@@ -9,7 +9,7 @@ import linkedinLogo from '../logos/LI-In-Bug.png';
 const footerStyles = {
   container: {
     width: '100%',
-    height: '45vh', //Total height (minus) AppHeader height
+    height: '45vh',
     position: 'sticky',
     marginTop: '10vh',
     backgroundColor: '#181823',
@@ -239,7 +239,7 @@ export default function Footer({ scrollToSection }) {
             userSelect: 'none',
           }}
         >
-          Yes! I made this website from scratch! Find the code on{' '}
+          This website is made from scratch! Find the code on{' '}
           <a
             href="https://github.com/sdikshant89/MyFolio"
             style={{

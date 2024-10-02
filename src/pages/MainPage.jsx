@@ -70,22 +70,3 @@ function MainPage(props) {
 }
 
 export default MainPage;
-
-// const InvisibleScrollbarBox = styled(Box)({
-//   scrollbarWidth: 'thin',
-//   scrollbarColor: 'transparent transparent',
-
-//   '&::-webkit-scrollbar': {
-//     width: 0,
-//     background: 'transparent',
-//   },
-
-//   '&:hover::-webkit-scrollbar': {
-//     width: '8px',
-//   },
-
-//   '&::-webkit-scrollbar-thumb': {
-//     backgroundColor: 'rgba(0, 0, 0, 0.3)',
-//     borderRadius: '10px',
-//   },
-// });

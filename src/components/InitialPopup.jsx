@@ -35,7 +35,7 @@ function InitialPopup(props) {
         }}
         id="customized-dialog-title"
       >
-        Dev's Message
+        Welcome!
       </DialogTitle>
       <IconButton
         aria-label="close"

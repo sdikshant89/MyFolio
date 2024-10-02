@@ -105,7 +105,7 @@ function WelcomePage(props) {
               fontSize: '1.3rem',
             }}
           >
-            I'm a{' '}
+            A{' '}
             <span
               style={{ fontWeight: 700, color: 'white', fontStyle: 'italic' }}
             >

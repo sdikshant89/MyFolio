@@ -12,6 +12,7 @@ const cardStyles = {
     display: 'flex',
     flexDirection: 'column',
     minWidth: '400px',
+    alignItems: 'flex-start',
   },
   desc: {
     color: 'white',

@@ -28,7 +28,7 @@ const pageStyles = {
   cardBox: {
     display: 'flex',
     justifyContent: 'space-between',
-    alignItems: 'center',
+    alignItems: 'flex-start',
     margin: '2vh 8vw 2vh 8vw',
     gap: '2vw',
     minWidth: '900px',
@@ -51,7 +51,7 @@ function WorkExPage(props) {
         <WorkExCards
           number="01"
           compName="The Chokka Center"
-          position="Software Developer Intern"
+          position="Software Developer"
           location="Edmonton, AB, Canada"
           year="Jan 2024 - Present"
           desc="Developed a microservice using Express and Node.js for mental health assessment and prediction, enhancing clinic software for improved patient record management and user experience."
