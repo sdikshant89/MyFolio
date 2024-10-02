@@ -9,7 +9,6 @@ const pageStyles = {
     position: 'sticky',
     minHeight: '700px',
     minWidth: '950px',
-    paddingTop: '20vh',
   },
   superHead: {
     color: 'darkgrey',

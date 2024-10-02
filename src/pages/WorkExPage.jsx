@@ -9,7 +9,6 @@ const pageStyles = {
     zIndex: 5,
     minHeight: '800px',
     minWidth: '900px',
-    paddingTop: '20vh',
   },
   head: {
     color: 'darkgrey',

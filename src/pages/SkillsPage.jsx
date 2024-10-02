@@ -23,7 +23,6 @@ const pageStyles = {
     height: '110vh',
     position: 'sticky',
     minHeight: '800px',
-    paddingTop: '20vh',
     display: 'flex',
     justifyContent: 'flex-start',
     flexDirection: 'column',
