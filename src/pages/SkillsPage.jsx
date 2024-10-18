@@ -26,6 +26,7 @@ const pageStyles = {
     display: 'flex',
     justifyContent: 'flex-start',
     flexDirection: 'column',
+    paddingTop: '20vh',
   },
   superHead: {
     color: 'darkgrey',

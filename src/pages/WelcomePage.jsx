@@ -23,10 +23,10 @@ const pageStyles = {
   },
   container: {
     width: '100%',
-    height: '85vh',
+    height: '75vh',
     position: 'sticky',
     marginTop: '15vh',
-    minHeight: '800px',
+    minHeight: '600px',
     maxHeight: '800px',
   },
   myName: {

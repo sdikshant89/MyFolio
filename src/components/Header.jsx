@@ -25,6 +25,7 @@ const headerStyles = {
     '& .MuiTypography-root': {
       fontWeight: 400,
       color: 'lightBlue',
+      fontSize: '1.2rem',
     },
     '& .MuiButton-root': {
       display: 'flex',
@@ -37,7 +38,7 @@ const headerStyles = {
         },
       },
       '& img': {
-        width: '1.2rem', // Adjust the logo size to match font size (rem is relative to root)
+        width: '1.2rem',
         height: 'auto',
       },
     },

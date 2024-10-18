@@ -7,8 +7,9 @@ const pageStyles = {
     position: 'sticky',
     userSelect: 'none',
     zIndex: 5,
-    minHeight: '800px',
+    minHeight: '750px',
     minWidth: '900px',
+    paddingTop: '20vh',
   },
   head: {
     color: 'darkgrey',

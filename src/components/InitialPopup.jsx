@@ -23,7 +23,6 @@ function InitialPopup(props) {
       onClose={props.handleClose}
       aria-labelledby="customized-dialog-title"
       open={props.open}
-      sx={{}}
     >
       <DialogTitle
         sx={{

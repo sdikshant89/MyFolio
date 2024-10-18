@@ -42,7 +42,6 @@ export const darkTheme = createTheme({
         },
         body1: {
           fontWeight: 400,
-          fontSize: '20px',
         },
       },
     },
